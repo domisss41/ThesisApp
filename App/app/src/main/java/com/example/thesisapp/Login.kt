@@ -67,11 +67,6 @@ class Login : AppCompatActivity() {
                 return
             }
 
-            // 1 zmiana
-            // 2 zmiana
-            // 3 zmiana
-            
-
             startActivity(Intent(this, MainActivity:: class.java))
 
 //            auth.signInWithEmailAndPassword(email.text.toString(), password.text.toString())

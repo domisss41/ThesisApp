@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "365898301576",
+    "firebase_url": "https://thesisappplastic.firebaseio.com",
+    "project_id": "thesisappplastic",
+    "storage_bucket": "thesisappplastic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:365898301576:android:477e24e99a3e75964b1f3d",
+        "android_client_info": {
+          "package_name": "com.example.thesisapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "365898301576-8omtjufh71fpgm8gt212vvfmlurdnofd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDalfKTF4hVn8-UORTF0hOQL_2qYb2BhhA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "365898301576-8omtjufh71fpgm8gt212vvfmlurdnofd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
