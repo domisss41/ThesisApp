@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Activity2">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonMyAccount"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/button"
+                android:foreground="@drawable/profilenew" />
+
+
+            <TextView
+                android:id="@+id/myAccount"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_horizontal"
+                android:text="My account"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textColorHighlight="#F2F2F2"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/buttonRecycling"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/button"
+                android:foreground="@drawable/recycling" />
+
+            <TextView
+                android:id="@+id/recycling"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Recycling"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textColorHighlight="#F2F2F2"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/button"
+                android:foreground="@drawable/icontwo" />
+
+            <TextView
+                android:id="@+id/addPlastic"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_horizontal"
+                android:text="Add plastic"
+                android:textColor="#000000"
+                android:textColorHighlight="#F2F2F2"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/button"
+                android:foreground="@drawable/challenge" />
+
+            <TextView
+                android:id="@+id/challenges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Challenges"
+                android:textColor="#000000"
+                android:textColorHighlight="#F2F2F2"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/button"
+                android:foreground="@drawable/statistic" />
+
+            <TextView
+                android:id="@+id/statysctics"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_horizontal"
+                android:text="Statystics"
+                android:textColor="#000000"
+                android:textColorHighlight="#F2F2F2"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonPlasticInfo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/button"
+                android:foreground="@drawable/info" />
+
+            <TextView
+                android:id="@+id/information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Plastic info"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textColorHighlight="#F2F2F2"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
