@@ -67,6 +67,9 @@ class Login : AppCompatActivity() {
                 return
             }
 
+            // test adasia
+            // adas jest super kocham go!!!!!<3
+
             startActivity(Intent(this, MainActivity:: class.java))
 
 //            auth.signInWithEmailAndPassword(email.text.toString(), password.text.toString())
