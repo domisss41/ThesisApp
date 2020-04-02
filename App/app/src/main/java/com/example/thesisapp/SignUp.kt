@@ -7,19 +7,19 @@ import android.util.Patterns
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
-//import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import kotlinx.android.synthetic.main.activity_sign_up.view.*
 
 class SignUp : AppCompatActivity() {
 
-    //private lateinit var auth: FirebaseAuth
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-        // auth = FirebaseAuth.getInstance()
+        auth = FirebaseAuth.getInstance()
 
         val backSignUp : TextView = findViewById(R.id.backToSignUp)
 
@@ -71,24 +71,24 @@ class SignUp : AppCompatActivity() {
             return
         }
 
-//        auth.createUserWithEmailAndPassword(email.text.toString(), password.text.toString()).addOnCompleteListener(this) { task ->
-//                if (task.isSuccessful) {
-//                    progressBar.visibility = View.VISIBLE
-//                    Toast.makeText(baseContext, "Registration completed, check your email box", Toast.LENGTH_SHORT).show()
-//
-//                    val user = auth.currentUser
-//                    user?.sendEmailVerification()
-//                        ?.addOnCompleteListener { task ->
-//                            if (task.isSuccessful) {
-//                                startActivity(Intent(this, Login::class.java))
-//                                finish()
-//                            }
-//                        }
-//                } else {
-//                    Toast.makeText(baseContext, "Sign Up failed. Try again", Toast.LENGTH_SHORT).show()
-//                }
-//
-//            }
+        auth.createUserWithEmailAndPassword(email.text.toString(), password.text.toString()).addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    progressBar.visibility = View.VISIBLE
+                    Toast.makeText(baseContext, "Registration completed, check your email box", Toast.LENGTH_SHORT).show()
+
+                    val user = auth.currentUser
+                    user?.sendEmailVerification()
+                        ?.addOnCompleteListener { task ->
+                            if (task.isSuccessful) {
+                                startActivity(Intent(this, Login::class.java))
+                                finish()
+                            }
+                        }
+                } else {
+                    Toast.makeText(baseContext, "Sign Up failed. Try again", Toast.LENGTH_SHORT).show()
+                }
+
+            }
     }
 }
 
