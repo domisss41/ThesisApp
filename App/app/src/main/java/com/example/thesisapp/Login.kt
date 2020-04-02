@@ -69,6 +69,7 @@ class Login : AppCompatActivity() {
 
             // 1 zmiana
             // 2 zmiana
+            // 3 zmiana
             
 
             startActivity(Intent(this, MainActivity:: class.java))
