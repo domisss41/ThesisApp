@@ -8,6 +8,8 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import kotlinx.android.synthetic.main.activity_sign_up.view.*
 
@@ -71,15 +73,26 @@ class SignUp : AppCompatActivity() {
             return
         }
 
+        if (birth.text.toString().isEmpty()) {
+            birth.error = "Please enter year of birth"
+            birth.requestFocus()
+            return
+        }
+
+
+
         auth.createUserWithEmailAndPassword(email.text.toString(), password.text.toString()).addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     progressBar.visibility = View.VISIBLE
-                    Toast.makeText(baseContext, "Registration completed, check your email box", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(baseContext, "Registration completed", Toast.LENGTH_SHORT).show()
 
                     val user = auth.currentUser
+
+                    saveUser()
+
                     user?.sendEmailVerification()
-                        ?.addOnCompleteListener { task ->
-                            if (task.isSuccessful) {
+                        ?.addOnCompleteListener { tasksecond ->
+                            if (tasksecond.isSuccessful) {
                                 startActivity(Intent(this, Login::class.java))
                                 finish()
                             }
@@ -90,5 +103,25 @@ class SignUp : AppCompatActivity() {
 
             }
     }
+
+    private fun saveUser(){
+
+        var login = login.text.toString()
+        var email = email.text.toString()
+        var password = password.text.toString()
+        var birth = birth.text.toString()
+
+        val ref = FirebaseDatabase.getInstance().getReference("Users")
+        val userId = ref.push().key
+        val userKey = auth.uid
+
+        val user = User(userKey.toString(), login.toString(), email.toString(), password.toString(), birth.toString())
+
+        ref.child(userId.toString()).setValue(user)
+
+
+    }
+
+
 }
 
