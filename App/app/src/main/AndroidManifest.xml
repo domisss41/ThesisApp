@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PlasticInfo.PlasticTypes.OTHER"></activity>
+        <activity android:name=".MyAccount"></activity>
+        <activity android:name=".PlasticInfo.PlasticTypes.OTHER" />
         <activity android:name=".PlasticInfo.PlasticTypes.PS" />
         <activity android:name=".PlasticInfo.PlasticTypes.PP" />
         <activity android:name=".PlasticInfo.PlasticTypes.LDPE" />

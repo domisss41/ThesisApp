@@ -12,6 +12,13 @@ class Activity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_2)
 
+        val profile : Button = findViewById(R.id.buttonMyAccount)
+
+        profile.setOnClickListener {
+            val intent = Intent(this, MyAccount:: class.java)
+            startActivity(intent)
+        }
+
         val recycling : Button = findViewById(R.id.buttonRecycling)
 
         recycling.setOnClickListener {
