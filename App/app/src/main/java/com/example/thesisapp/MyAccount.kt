@@ -32,16 +32,7 @@ class MyAccount : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         val currentUserID = auth.uid
         mDatabase = FirebaseDatabase.getInstance().getReference("Users")
-        val savebtn : TextView = findViewById(R.id.buttonSave)
 
-        savebtn.setOnClickListener {
-            Log.d("Test", login.text.toString())
-            Log.d("Test", email.text.toString())
-            Log.d("Test", birth.text.toString())
-
-//            val intent = Intent(this, Login:: class.java)
-//            startActivity(intent)
-        }
 
         val usersListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
