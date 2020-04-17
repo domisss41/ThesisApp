@@ -37,9 +37,9 @@ class SignUp : AppCompatActivity() {
 
     fun signUpUser() {
 
-        if (login.text.toString().isEmpty()) {
-            login.error = "Please enter login"
-            login.requestFocus()
+        if (nickname.text.toString().isEmpty()) {
+            nickname.error = "Please enter login"
+            nickname.requestFocus()
             return
         }
 
@@ -106,7 +106,7 @@ class SignUp : AppCompatActivity() {
 
     private fun saveUser(){
 
-        var login = login.text.toString()
+        var login = nickname.text.toString()
         var email = email.text.toString()
         var password = password.text.toString()
         var birth = birth.text.toString()

@@ -40,8 +40,8 @@ class MyAccount : AppCompatActivity() {
                     val tempID = ds.child("id").getValue(String::class.java)
                     if(tempID.equals(currentUserID)){
                         Log.d(TAG, "Znaleziono!")
-                        login.text = tempID
-                        login.text = ds.child("login").getValue(String::class.java)
+                        nickname.text = tempID
+                        nickname.text = ds.child("login").getValue(String::class.java)
                         email.text = ds.child("email").getValue(String::class.java)
                         birth.text = ds.child("birth").getValue(String::class.java)
                         break
@@ -59,7 +59,7 @@ class MyAccount : AppCompatActivity() {
                 // Failed to read value
                 Log.e(TAG, "onCancelled: Failed to read message")
 
-                login.text = ""
+                nickname.text = ""
                 email.text = ""
                 birth.text = "onCancelled: Failed to read message!"
             }
