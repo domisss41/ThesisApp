@@ -22,60 +22,53 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:text="Add profile picture"
-            android:textSize="14dp"
+            android:textSize="14sp"
             android:textAllCaps="false"/>
 
-        <EditText
+        <TextView
             android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="40dp"
             android:drawablePadding="10dp"
-            android:singleLine="true"
-            android:hint="Login" />
+            android:singleLine="true" />
 
-        <EditText
+        <TextView
             android:id="@+id/password"
-            android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:drawablePadding="10dp"
-            android:singleLine="true"
-            android:hint="Password" />
+            android:singleLine="true" />
 
-        <EditText
+        <TextView
             android:id="@+id/repeatPassword"
-            android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:drawablePadding="10dp"
-            android:singleLine="true"
-            android:hint="Repeat Password" />
+            android:singleLine="true" />
 
-        <EditText
+        <TextView
             android:id="@+id/email"
             android:inputType="textEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
             android:drawablePadding="10dp"
-            android:singleLine="true"
-            android:hint="E-mail" />
+            android:singleLine="true" />
 
-        <EditText
+        <TextView
             android:id="@+id/birth"
             android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
             android:drawablePadding="10dp"
-            android:singleLine="true"
-            android:hint="Year of birth" />
+            android:singleLine="true" />
 
         <Button
-            android:id="@+id/buttonJoinIn"
+            android:id="@+id/buttonSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -85,9 +78,5 @@
             android:textAllCaps="false"
             android:textSize="21sp" />
 
-
-
     </LinearLayout>
-
-
 </RelativeLayout>

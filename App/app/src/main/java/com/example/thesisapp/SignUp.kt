@@ -112,16 +112,14 @@ class SignUp : AppCompatActivity() {
         var birth = birth.text.toString()
 
         val ref = FirebaseDatabase.getInstance().getReference("Users")
-        val userId = ref.push().key
+        //val userId = ref.push().key
+        val userId = auth.uid
         val userKey = auth.uid
 
         val user = User(userKey.toString(), login.toString(), email.toString(), password.toString(), birth.toString())
 
         ref.child(userId.toString()).setValue(user)
-
-
     }
-
 
 }
 
