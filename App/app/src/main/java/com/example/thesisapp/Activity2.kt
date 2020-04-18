@@ -19,9 +19,9 @@ class Activity2 : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val recycling : Button = findViewById(R.id.buttonRecycling)
+        val infoRecycling : Button = findViewById(R.id.buttonRecycling)
 
-        recycling.setOnClickListener {
+        infoRecycling.setOnClickListener {
             val intent = Intent(this, plasticRecycling:: class.java)
             startActivity(intent)
         }
