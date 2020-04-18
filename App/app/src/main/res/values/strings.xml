@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Plastic Thesis App</string>
+
+    <string name="descriptio_pete">
+
+        PET is one of the most commonly used plastics in consumer products, and is found in most water and pop bottles, and some packaging.
+        It is intended for single use applications; repeated use increases the risk of leaching and bacterial growth.
+        PET plastic is difficult to decontaminate, and proper cleaning requires harmful chemicals.
+        Polyethylene terephthalates may leach carcinogens.
+        PET plastic is recyclable and about 25% of PET bottles in the US today are recycled.
+        The plastic is crushed and then shredded into small flakes which are then reprocessed to make new PET bottles, or spun into polyester fiber.
+        This recycled fiber is used to make textiles such as fleece garments, carpets, stuffing for pillows and life jackets, and similar products.
+        Products made of #1 (PET) plastic should be recycled but not reused.
+        To use less PET plastic, consider switching to reusable beverage containers and replacing disposable food packaging with reusable alternatives.
+
+    </string>
+
 </resources>

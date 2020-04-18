@@ -19,10 +19,31 @@ class Activity2 : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val infoRecycling : Button = findViewById(R.id.buttonRecycling)
+        val howToRecycle : Button = findViewById(R.id.buttonRecycling)
 
-        infoRecycling.setOnClickListener {
-            val intent = Intent(this, plasticRecycling:: class.java)
+        howToRecycle.setOnClickListener {
+            val intent = Intent(this, Recycling:: class.java)
+            startActivity(intent)
+        }
+
+        val plasticAddition : Button = findViewById(R.id.buttonAddPlastic)
+
+        plasticAddition.setOnClickListener {
+            val intent = Intent(this, AddPlastic :: class.java)
+            startActivity(intent)
+        }
+
+        val addChallenges : Button = findViewById(R.id.buttonChallenge)
+
+        addChallenges.setOnClickListener {
+            val intent = Intent(this, Challenges:: class.java)
+            startActivity(intent)
+        }
+
+        val statysticsButton : Button = findViewById(R.id.buttonStatistics)
+
+        statysticsButton.setOnClickListener {
+            val intent = Intent(this, Statystics :: class.java)
             startActivity(intent)
         }
 

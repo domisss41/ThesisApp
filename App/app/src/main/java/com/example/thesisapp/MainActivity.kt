@@ -18,9 +18,9 @@ class MainActivity : AppCompatActivity() {
 
         helloUser.text = "Welcome Domi!"
 
-        val addPlastic : Button = findViewById(R.id.buttonHowToSafeWorld)
+        val mainScreen : Button = findViewById(R.id.buttonHowToSafeWorld)
 
-        addPlastic.setOnClickListener {
+        mainScreen.setOnClickListener {
             val intent = Intent(this, Activity2 :: class.java)
             startActivity(intent)
         }

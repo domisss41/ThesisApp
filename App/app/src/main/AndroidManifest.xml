@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MyAccount"></activity>
+        <activity android:name=".Challenges"></activity>
+        <activity android:name=".Recycling" />
+        <activity android:name=".Statystics" />
+        <activity android:name=".AddPlastic" />
+        <activity android:name=".MyAccount" />
         <activity android:name=".PlasticInfo.PlasticTypes.OTHER" />
         <activity android:name=".PlasticInfo.PlasticTypes.PS" />
         <activity android:name=".PlasticInfo.PlasticTypes.PP" />
@@ -17,7 +21,6 @@
         <activity android:name=".PlasticInfo.PlasticTypes.PCV" />
         <activity android:name=".PlasticInfo.PlasticTypes.HDPE" />
         <activity android:name=".PlasticInfo.PlasticTypes.PETE" />
-        <activity android:name=".plasticRecycling" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".SignUp" />
         <activity android:name=".PlasticInfo.PlasticInfo" />

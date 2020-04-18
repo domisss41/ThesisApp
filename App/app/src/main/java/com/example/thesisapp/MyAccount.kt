@@ -47,13 +47,6 @@ class MyAccount : AppCompatActivity() {
                         break
                     }
                 }
-//
-//                if (dataSnapshot.exists()) {
-//
-//                    login.text = user.login
-//                    email.text = user.email
-//                    birth.text = user.birth
-//                }
             }
             override fun onCancelled(databaseError: DatabaseError) {
                 // Failed to read value
@@ -67,29 +60,6 @@ class MyAccount : AppCompatActivity() {
 
         mDatabase.addListenerForSingleValueEvent(usersListener)
 
-
-
-        /*mAuth = FirebaseAuth.getInstance()
-        mDatabase = FirebaseDatabase.getInstance().reference
-
-        fun currentUserReference(): DatabaseReference
-                = mDatabase.child("Users").child(mAuth.currentUser!!.uid)
-
-        val ref = FirebaseDatabase.getReference("Users")
-
-        ref.addValueEventListener(Users: ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                val value = dataSnapshot.getValue()
-                Log.d(TAG, "Value is: $value")
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException())
-            }
-        })*/
 
         buttonAddProfilePicture.setOnClickListener {
 
