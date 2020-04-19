@@ -77,7 +77,6 @@
             android:id="@+id/plus"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/textView1"
             android:text="+"
             android:textSize="20dp"/>
