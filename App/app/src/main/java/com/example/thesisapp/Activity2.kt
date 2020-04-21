@@ -29,14 +29,14 @@ class Activity2 : AppCompatActivity() {
         val plasticAddition : Button = findViewById(R.id.buttonAddPlastic)
 
         plasticAddition.setOnClickListener {
-            val intent = Intent(this, AddPlastic :: class.java)
+            val intent = Intent(this, PlasticExpandableListView :: class.java)
             startActivity(intent)
         }
 
         val addChallenges : Button = findViewById(R.id.buttonChallenge)
 
         addChallenges.setOnClickListener {
-            val intent = Intent(this, Challenges:: class.java)
+            val intent = Intent(this, AddPlastic:: class.java)
             startActivity(intent)
         }
 
