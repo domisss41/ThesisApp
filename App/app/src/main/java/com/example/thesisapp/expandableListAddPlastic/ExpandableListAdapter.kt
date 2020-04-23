@@ -1,4 +1,4 @@
-package com.example.thesisapp
+package com.example.thesisapp.expandableListAddPlastic
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
 import android.widget.TextView
+import com.example.thesisapp.R
 
 class ExpandableListAdapter(var context: Context, var header: MutableList<String>, var body : MutableList<MutableList<String>>) : BaseExpandableListAdapter() {
 

@@ -4,21 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PlasticExpandableListView">
+    tools:context=".expandableListAddPlastic.PlasticExpandableListView">
 
     <RelativeLayout
         android:id="@+id/addPlasticLogo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/gradienttwo">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
             android:gravity="center"
             android:layout_centerHorizontal="true">
 
@@ -36,19 +35,60 @@
 
             <ImageView
                 android:id="@+id/logo"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 app:srcCompat="@drawable/logo5" />
 
         </LinearLayout>
 
     </RelativeLayout>
 
-    <ExpandableListView
-        android:id="@+id/expandableListView"
+    <View
+        android:id="@+id/viewOne"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/addPlasticLogo">
-    </ExpandableListView>
+        android:layout_height="2dp"
+        android:layout_below="@+id/addPlasticLogo"
+        android:background="@color/colorPrimaryDark"/>
+
+
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_below="@id/viewOne"
+            android:layout_above="@+id/addPlasticUsed">
+        </ExpandableListView>
+
+
+    <RelativeLayout
+        android:id="@+id/addPlasticUsed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/addPlasticUsedToday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textAllCaps="false"
+                android:text="Add plastic used today"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
 
 </RelativeLayout>

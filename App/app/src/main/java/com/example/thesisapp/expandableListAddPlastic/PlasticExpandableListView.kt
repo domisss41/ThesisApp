@@ -1,7 +1,8 @@
-package com.example.thesisapp
+package com.example.thesisapp.expandableListAddPlastic
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.thesisapp.R
 import kotlinx.android.synthetic.main.activity_plastic_expandable_list_view.*
 
 class PlasticExpandableListView : AppCompatActivity() {
@@ -36,7 +37,13 @@ class PlasticExpandableListView : AppCompatActivity() {
         body.add(Two)
         body.add(Three)
 
-        expandableListView.setAdapter(ExpandableListAdapter(this,header,body))
+        expandableListView.setAdapter(
+            ExpandableListAdapter(
+                this,
+                header,
+                body
+            )
+        )
 
     }
 }

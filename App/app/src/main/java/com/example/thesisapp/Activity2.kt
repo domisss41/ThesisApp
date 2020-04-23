@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import com.example.thesisapp.PlasticInfo.PlasticInfo
+import com.example.thesisapp.expandableListAddPlastic.PlasticExpandableListView
 
 class Activity2 : AppCompatActivity() {
 
@@ -29,7 +30,7 @@ class Activity2 : AppCompatActivity() {
         val plasticAddition : Button = findViewById(R.id.buttonAddPlastic)
 
         plasticAddition.setOnClickListener {
-            val intent = Intent(this, PlasticExpandableListView :: class.java)
+            val intent = Intent(this, PlasticExpandableListView:: class.java)
             startActivity(intent)
         }
 
