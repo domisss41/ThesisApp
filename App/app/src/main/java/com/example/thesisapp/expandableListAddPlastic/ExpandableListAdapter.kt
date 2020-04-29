@@ -1,14 +1,22 @@
 package com.example.thesisapp.expandableListAddPlastic
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
+import android.widget.Button
 import android.widget.TextView
 import com.example.thesisapp.R
 
-class ExpandableListAdapter(var context: Context, var header: MutableList<String>, var body : MutableList<MutableList<String>>) : BaseExpandableListAdapter() {
+class ExpandableListAdapter(
+    var context: Context,
+    var header: MutableList<String>,
+    var body : MutableList<MutableList<String>>) : BaseExpandableListAdapter() {
+
+    lateinit var buttonIncrease: Button
+    lateinit var buttonDecrease: Button
 
     override fun getGroup(groupPosition: Int): String {
         return header[groupPosition]
@@ -55,6 +63,28 @@ class ExpandableListAdapter(var context: Context, var header: MutableList<String
 
         val title = convertView?.findViewById<TextView>(R.id.plasticTitleChild)
         title?.text = getChild(groupPosition, childPosition)
+
+        var itemsAmount = 0
+
+        if (convertView != null) {
+            buttonIncrease = convertView.findViewById(R.id.increase)
+            buttonDecrease = convertView.findViewById(R.id.decrease)
+
+        }
+        buttonIncrease.setOnClickListener(){
+            val textViewResult = convertView?.findViewById<TextView>(R.id.result)
+            textViewResult?.text = (textViewResult?.text.toString().toInt() + 1).toString()
+        }
+
+        buttonDecrease.setOnClickListener(){
+
+            val textViewResult = convertView?.findViewById<TextView>(R.id.result)
+
+            if(textViewResult?.text.toString().toInt() > 0) {
+                textViewResult?.text = (textViewResult?.text.toString().toInt() - 1).toString()
+            }
+        }
+
         return convertView
     }
 
@@ -65,6 +95,4 @@ class ExpandableListAdapter(var context: Context, var header: MutableList<String
     override fun getGroupCount(): Int {
         return header.size
     }
-
-
 }

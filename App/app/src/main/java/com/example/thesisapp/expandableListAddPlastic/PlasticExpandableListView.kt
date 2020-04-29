@@ -2,13 +2,14 @@ package com.example.thesisapp.expandableListAddPlastic
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.example.thesisapp.R
 import kotlinx.android.synthetic.main.activity_plastic_expandable_list_view.*
 
 class PlasticExpandableListView : AppCompatActivity() {
 
     val header : MutableList<String> = ArrayList()
-    val body: MutableList<MutableList<String>> = ArrayList()
+    val body: MutableList<MutableList<String >> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
