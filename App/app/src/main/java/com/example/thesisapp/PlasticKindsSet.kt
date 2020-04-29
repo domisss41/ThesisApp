@@ -9,15 +9,22 @@ class PlasticKindsSet() {
         foodPackage.add(plasticTypeModel("Plastic bag", 15))
         foodPackage.add(plasticTypeModel("Yogurt Cup", 70))
         foodPackage.add(plasticTypeModel("Chips bag", 30))
-        foodPackage.add(plasticTypeModel("Patyczki od uszu", 70))
 
         val cosmetics: ArrayList<plasticTypeModel> = ArrayList()
         cosmetics.add(plasticTypeModel("Shampoo", 40))
         cosmetics.add(plasticTypeModel("Shower gel", 70))
         cosmetics.add(plasticTypeModel("Cream", 20))
+        cosmetics.add(plasticTypeModel("Cotton bud", 70))
+
+        val disposablePlastic: ArrayList<plasticTypeModel> = ArrayList()
+        disposablePlastic.add(plasticTypeModel("Straw", 40))
+        disposablePlastic.add(plasticTypeModel("Plastic cup", 70))
+        disposablePlastic.add(plasticTypeModel("Plastic plate", 20))
+        disposablePlastic.add(plasticTypeModel("Plastic ", 20))
 
         plasticKinds.add(foodPackage) // 0
         plasticKinds.add(cosmetics) // 1
+        plasticKinds.add(disposablePlastic) // 2
 
         return plasticKinds
     }

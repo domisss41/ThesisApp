@@ -31,15 +31,15 @@ class PlasticExpandableListView : AppCompatActivity() {
             Two.add(item.plasticKind)
         }
 
-        val Three :MutableList<String> = ArrayList()
-        Three.add("Straw")
-        Three.add("Plastic cub")
-        Three.add("Plastic plate")
+        val threeComplex = arrayData.get(2).toMutableList()
+        val Three : MutableList<String> = ArrayList()
+        for(item in threeComplex){
+            Three.add(item.plasticKind)
+        }
 
         header.add("Food packaging and containers")
         header.add("Cosmetics and detergents")
         header.add("Disposable plastic")
-
 
 
         body.add(One)
