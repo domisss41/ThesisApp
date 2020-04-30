@@ -9,6 +9,7 @@ import android.widget.BaseExpandableListAdapter
 import android.widget.Button
 import android.widget.TextView
 import com.example.thesisapp.R
+import com.example.thesisapp.plasticTypeModel
 
 class ExpandableListAdapter(
     var context: Context,
@@ -17,6 +18,8 @@ class ExpandableListAdapter(
 
     lateinit var buttonIncrease: Button
     lateinit var buttonDecrease: Button
+    lateinit var buttonSubmit: Button
+    lateinit var allItemsArray: ArrayList<DataReceive>
 
     override fun getGroup(groupPosition: Int): String {
         return header[groupPosition]
@@ -69,21 +72,22 @@ class ExpandableListAdapter(
         if (convertView != null) {
             buttonIncrease = convertView.findViewById(R.id.increase)
             buttonDecrease = convertView.findViewById(R.id.decrease)
-
         }
+
         buttonIncrease.setOnClickListener(){
             val textViewResult = convertView?.findViewById<TextView>(R.id.result)
             textViewResult?.text = (textViewResult?.text.toString().toInt() + 1).toString()
+            body
         }
 
         buttonDecrease.setOnClickListener(){
-
             val textViewResult = convertView?.findViewById<TextView>(R.id.result)
-
             if(textViewResult?.text.toString().toInt() > 0) {
                 textViewResult?.text = (textViewResult?.text.toString().toInt() - 1).toString()
             }
         }
+
+
 
         return convertView
     }
@@ -96,3 +100,5 @@ class ExpandableListAdapter(
         return header.size
     }
 }
+
+class DataReceive(val name: String, val amount: Int){}

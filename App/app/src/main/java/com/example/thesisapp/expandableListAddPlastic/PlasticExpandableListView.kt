@@ -16,6 +16,7 @@ class PlasticExpandableListView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_plastic_expandable_list_view)
 
+
         val dataRaw = PlasticKindsSet()
         val arrayData = dataRaw.getPlasticTypes()
 
@@ -41,10 +42,14 @@ class PlasticExpandableListView : AppCompatActivity() {
         header.add("Cosmetics and detergents")
         header.add("Disposable plastic")
 
-
         body.add(One)
         body.add(Two)
         body.add(Three)
+
+        var buttonSubmit: Button = findViewById(R.id.addPlasticUsedToday)
+        buttonSubmit.setOnClickListener(){
+            val beniz = body
+        }
 
         expandableListView.setAdapter(
             ExpandableListAdapter(
