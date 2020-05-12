@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    
 
     <LinearLayout
         android:orientation="vertical"
@@ -17,55 +15,82 @@
             android:layout_height="0dp"
             android:layout_weight="29">
 
-
-            <ImageView
-                android:id="@+id/waste_image"
-                android:scaleType="fitXY"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/viewOne"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@+id/waste_title"
+                android:background="@color/colorPrimaryDark"/>
 
             <TextView
                 android:id="@+id/waste_title"
                 android:text="WASTE"
-                android:textSize="30sp"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="35sp"
+                android:gravity="center"
                 android:padding="8dp"
                 android:textColor="@android:color/black"
-                android:background="@color/colorAccent"
-                android:layout_gravity="bottom"
+                android:background="@drawable/gradienttwo"
+                android:layout_gravity="top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-        </FrameLayout>
-        
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            
-            <ScrollView
+            <View
+                android:id="@+id/viewTwo"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                
-                <RelativeLayout
-                    android:padding="8dp"
+                android:layout_height="2dp"
+                android:layout_below="@+id/waste_title"
+                android:background="@color/colorPrimaryDark"/>
+
+            <ImageView
+                android:id="@+id/waste_image"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="40dp"
+                android:scaleType="centerInside"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewTwo"/>
+
+            <TextView
+                android:id="@+id/waste_kind"
+                android:text="Kind of waste"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:padding="8dp"
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/waste_image"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="50dp"/>
+
+
+                <TextView
+                    android:id="@+id/waste_description"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Throw to"
+                    android:background="@color/colorAccent"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="20sp"
+                    android:gravity="bottom"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="80dp"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@+id/waste_kind"/>
 
-                    <TextView
-                        android:id="@+id/waste_description"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Throw to the Plastic"
-                        android:textColor="@android:color/black" />
+        </RelativeLayout>
 
-                </RelativeLayout>
-                
-            </ScrollView>
-            
-        </androidx.cardview.widget.CardView>
+        </FrameLayout>
 
 
     </LinearLayout>
 
-
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

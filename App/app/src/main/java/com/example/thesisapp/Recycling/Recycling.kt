@@ -48,6 +48,7 @@ class Recycling : AppCompatActivity(), IFirebaseLoadDone {
     lateinit var waste_image: ImageView
     lateinit var waste_name: TextView
     lateinit var waste_description: TextView
+    lateinit var waste_kind: TextView
 
     var isFirstTimeClick = true
 
@@ -70,7 +71,7 @@ class Recycling : AppCompatActivity(), IFirebaseLoadDone {
 
             override fun onDataChange(p0: DataSnapshot) {
                 for(wasteSnapShot in p0.children)
-                    wasteList.add(wasteSnapShot.getValue<Waste>(Waste::class.java!!)!!)
+                    wasteList.add(wasteSnapShot.getValue<Waste>(Waste::class.java)!!)
                 iFirebaseLoadDone.onFirebaseLoadSuccess(wasteList)
             }
 
@@ -82,6 +83,9 @@ class Recycling : AppCompatActivity(), IFirebaseLoadDone {
         waste_description = bottom_sheet_view.findViewById(R.id.waste_description) as TextView
         waste_image = bottom_sheet_view.findViewById(R.id.waste_image) as ImageView
         waste_name = bottom_sheet_view.findViewById(R.id.waste_title) as TextView
+        waste_kind = bottom_sheet_view.findViewById(R.id.waste_kind) as TextView
+
+        bottomSheetDialog.setContentView(bottom_sheet_view)
 
         //Event
         searchable_spinner.onItemSelectedListener = (object:AdapterView.OnItemSelectedListener{
@@ -95,6 +99,7 @@ class Recycling : AppCompatActivity(), IFirebaseLoadDone {
                     val waste = wasteList[position]
                     waste_name.text = waste.name
                     waste_description.text = waste.description
+                    waste_kind.text = waste.kind
                     Picasso.get().load(waste.image).into(waste_image)
 
                     bottomSheetDialog.show()
