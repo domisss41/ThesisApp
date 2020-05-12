@@ -38,13 +38,21 @@ class PlasticExpandableListView : AppCompatActivity() {
             Three.add(item.plasticKind)
         }
 
+        val fourComplex = arrayData.get(3).toMutableList()
+        val Four : MutableList<String> = ArrayList()
+        for(item in fourComplex){
+            Four.add(item.plasticKind)
+        }
+
         header.add("Food packaging and containers")
         header.add("Cosmetics and detergents")
         header.add("Disposable plastic")
+        header.add("E-waste")
 
         body.add(One)
         body.add(Two)
         body.add(Three)
+        body.add(Four)
 
         var buttonSubmit: Button = findViewById(R.id.addPlasticUsedToday)
         buttonSubmit.setOnClickListener(){

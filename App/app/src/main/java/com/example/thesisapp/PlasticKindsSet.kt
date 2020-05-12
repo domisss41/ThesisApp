@@ -15,6 +15,7 @@ class PlasticKindsSet() {
         cosmetics.add(plasticTypeModel("Shower gel", 70))
         cosmetics.add(plasticTypeModel("Cream", 20))
         cosmetics.add(plasticTypeModel("Cotton bud", 70))
+        cosmetics.add(plasticTypeModel("Disposable single blade razor", 70))
 
         val disposablePlastic: ArrayList<plasticTypeModel> = ArrayList()
         disposablePlastic.add(plasticTypeModel("Straw", 40))
@@ -22,9 +23,17 @@ class PlasticKindsSet() {
         disposablePlastic.add(plasticTypeModel("Plastic plate", 20))
         disposablePlastic.add(plasticTypeModel("Plastic ", 20))
 
+        val electronicWastePlastic: ArrayList<plasticTypeModel> = ArrayList()
+        electronicWastePlastic.add(plasticTypeModel("Headphones", 40))
+        electronicWastePlastic.add(plasticTypeModel("Phone", 70))
+        electronicWastePlastic.add(plasticTypeModel("Charger", 20))
+        electronicWastePlastic.add(plasticTypeModel("Cable", 20))
+        electronicWastePlastic.add(plasticTypeModel("Laptop", 20))
+
         plasticKinds.add(foodPackage) // 0
         plasticKinds.add(cosmetics) // 1
         plasticKinds.add(disposablePlastic) // 2
+        plasticKinds.add(electronicWastePlastic) // 3
 
         return plasticKinds
     }

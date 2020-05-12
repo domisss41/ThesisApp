@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".expandableListAddPlastic.PlasticExpandableListView"></activity>
         <activity android:name=".Challenges" />
-        <activity android:name=".Recycling" />
+        <activity android:name=".Recycling.Recycling" />
         <activity android:name=".Statystics" />
         <activity android:name=".AddPlastic" />
         <activity android:name=".MyAccount" />
