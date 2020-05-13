@@ -95,19 +95,24 @@ class Recycling : AppCompatActivity(), IFirebaseLoadDone {
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long
             ) {
-                if(!isFirstTimeClick){
-                    val waste = wasteList[position]
-                    waste_name.text = waste.name
-                    waste_description.text = waste.description
-                    waste_kind.text = waste.kind
-                    Picasso.get().load(waste.image).into(waste_image)
+                if (!isFirstTimeClick) {
+                    if (parent != null) {
+                        if (parent.getItemAtPosition(position).equals(">> CHECK WHERE TO THROW IT <<")) {
 
-                    bottomSheetDialog.show()
-                }
-                else
+                        } else {
+                            val waste = wasteList[position]
+                            waste_name.text = waste.name
+                            waste_description.text = waste.description
+                            waste_kind.text = waste.kind
+                            Picasso.get().load(waste.image).into(waste_image)
+
+                            bottomSheetDialog.show()
+                        }
+                    }
+                }else{
                     isFirstTimeClick = false
+                }
             }
-
 
         })
 

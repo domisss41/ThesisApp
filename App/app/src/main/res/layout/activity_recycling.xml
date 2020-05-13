@@ -5,18 +5,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
     tools:context=".Recycling.Recycling">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/wasteCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/gradienttwo"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@+id/logo"
+                android:fontFamily="sans-serif-medium"
+                android:text="To which bin throw a waste?"
+                android:textColor="#000000"
+                android:textSize="24dp" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/logo5" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/recycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="RECYCLE"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/wasteCheck"
+            android:foregroundGravity="center"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/trashImage"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="70dp"
+            android:src="@drawable/trash"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/recycle"
+            android:foregroundGravity="center"/>
 
 
     <com.toptoche.searchablespinnerlibrary.SearchableSpinner
         android:id="@+id/searchable_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:layout_below="@+id/trashImage"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
