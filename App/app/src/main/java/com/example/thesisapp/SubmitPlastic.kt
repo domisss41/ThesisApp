@@ -1,7 +1,7 @@
-package com.example.thesisapp.expandableListAddPlastic
+package com.example.thesisapp
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class SubmitPlastic : AppCompatActivity() {
 

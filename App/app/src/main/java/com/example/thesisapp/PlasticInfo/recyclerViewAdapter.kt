@@ -50,22 +50,18 @@ class recyclerViewAdapter(val userList: ArrayList<userDataModel>, val context: C
                 context.startActivity(intent)
             }
             if (position == 3){
-                val intent = Intent(context, PCV::class.java)
-                context.startActivity(intent)
-            }
-            if (position == 4){
                 val intent = Intent(context, LDPE::class.java)
                 context.startActivity(intent)
             }
-            if (position == 5){
+            if (position == 4){
                 val intent = Intent(context, PP::class.java)
                 context.startActivity(intent)
             }
-            if (position == 6){
+            if (position == 5){
                 val intent = Intent(context, PS::class.java)
                 context.startActivity(intent)
             }
-            if (position == 7){
+            if (position == 6){
                 val intent = Intent(context, OTHER::class.java)
                 context.startActivity(intent)
             }

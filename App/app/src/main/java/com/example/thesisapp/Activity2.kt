@@ -38,7 +38,7 @@ class Activity2 : AppCompatActivity() {
         val addChallenges : Button = findViewById(R.id.buttonChallenge)
 
         addChallenges.setOnClickListener {
-            val intent = Intent(this, AddPlastic:: class.java)
+            val intent = Intent(this, Challenges:: class.java)
             startActivity(intent)
         }
 

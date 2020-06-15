@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewFlipper = findViewById(R.id.mainScreenImages)
-
         for(i in 0 until image.size) {
             flip_image(image[i])
         }

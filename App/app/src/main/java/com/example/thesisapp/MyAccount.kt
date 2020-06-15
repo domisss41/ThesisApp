@@ -41,7 +41,7 @@ class MyAccount : AppCompatActivity() {
                     if(tempID.equals(currentUserID)){
                         Log.d(TAG, "Znaleziono!")
                         nickname.text = tempID
-                        nickname.text = ds.child("login").getValue(String::class.java)
+                        nickname.text = ds.child("nickname").getValue(String::class.java)
                         email.text = ds.child("email").getValue(String::class.java)
                         birth.text = ds.child("birth").getValue(String::class.java)
                         break

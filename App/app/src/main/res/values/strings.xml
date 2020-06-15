@@ -3,8 +3,9 @@
 
     <string name="descriptio_pete">
 
-        PET is one of the most commonly used plastics in consumer products, and is found in most water and pop bottles, and some packaging.
-        It is intended for single use applications; repeated use increases the risk of leaching and bacterial growth.
+        PET is one of the most commonly used plastics in consumer products.
+        It can be found in most water and pop bottles and some packaging.
+        What is more, it is intended for single use applications; repeated use increases the risk of leaching and bacterial growth.
         PET plastic is difficult to decontaminate, and proper cleaning requires harmful chemicals.
         Polyethylene terephthalates may leach carcinogens.
         PET plastic is recyclable and about 25% of PET bottles in the US today are recycled.
@@ -12,6 +13,76 @@
         This recycled fiber is used to make textiles such as fleece garments, carpets, stuffing for pillows and life jackets, and similar products.
         Products made of #1 (PET) plastic should be recycled but not reused.
         To use less PET plastic, consider switching to reusable beverage containers and replacing disposable food packaging with reusable alternatives.
+
+    </string>
+
+    <string name="description_hdpe">
+
+        High-density polyethylene or polyethylene high-density is a thermoplastic polymer produced from the monomer ethylene.
+        It is sometimes called "alkathene" or "polythene" when used for HDPE pipes.
+        Like PET, HDPE is a frequently used, safe plastic container. It\'s denoted by a number 2 on plastic containers.
+        HDPE products are safe and are not known to transmit any chemicals into foods or drinks,
+        making this plastic a low health risk variety, according to Chemical Safety Facts.
+        HDPE products are safe and are not known to transmit any chemicals into foods or drinks, making this plastic a low health risk variety, according to Chemical Safety Facts.
+        This plastic is most often used for milk or water jugs, laundry detergents and shampoo bottles.
+
+    </string>
+
+    <string name="description_pvc">
+
+        Polyvinyl chloride is the world\'s third-most widely produced synthetic plastic polymer.
+        Economical, versatile polyvinyl chloride (PVC, or vinyl) is used in a variety of applications in the building and construction,
+        health care, electronics, automobile and other sectors, in products ranging from piping and siding,
+        blood bags and tubing, to wire and cable insulation, windshield system components and more.
+        An emerging toxic plastic of concern, polyvinyl chloride (PVC or vinyl), is used widespread in schools across the nation.
+        PVC is the most toxic plastic for our health and environment.
+        No other plastic contains or releases as many dangerous chemicals.
+        There\'s no safe way to manufacture, use or dispose of PVC products.
+
+    </string>
+
+    <string name="description_ldpe">
+
+        LDPE is a soft, flexible, lightweight plastic material.
+        It is often used for orthotics and prosthetics.
+        LDPE has good chemical and impact resistance and is easy to fabricate and form.
+        Low Density Polyethylene (LDPE) is the most common packaging material used for packaging a wide range of products.
+        The efficient disposal of these plastic materials is a herculean task as they are not easily degradable and pose detrimental effects on the environment.
+        LDPE has good chemical resistance, high impact strength, and strong wear absorption.
+        Like PET and HDPE plastics, LDPE can hold your food products without leaching any harmful materials or allowing microorganisms to permeate.
+
+    </string>
+
+    <string name="description_pp">
+
+        Polypropylene - 5 inside the triangle indicates the plastic is polypropylene or PP.
+        It is used in a variety of applications to include packaging for consumer products,
+        plastic parts for various industries including the automotive industry, special devices like living hinges, and textiles.
+        It is commonly found in medicine bottles, straws, bottle caps, ketchup bottles and syrup bottles, and some yogurt containers.
+        This plastic is often chosen for bottles and containers that must accept hot liquids as it has a high melting point.
+        PP is considered to be the safest of all plastics, this is a robust plastic that is heat resistant.
+        Because of its high heat tolerance, Polypropylene is unlikely to leach even when exposed to warm or hot water.
+        Polypropylene plastics can be re-used safely and with hot beverages.
+
+    </string>
+
+    <string name="description_ps">
+
+        Polystyrene plastic is a naturally transparent thermoplastic that is available as both a typical solid plastic as well in the form of a rigid foam material.
+        Polystyrene is made by stringing together, or polymerizing, styrene, a building-block chemical used in the manufacture of many products.
+        Styrene also occurs naturally in foods such as strawberries, cinnamon, coffee and beef.
+        Polystyrene contains the toxic substances Styrene and Benzene, suspected carcinogens and neurotoxins that are hazardous to humans.
+        Hot foods and liquids actually start a partial breakdown of the Styrofoam, causing some toxins to be absorbed into our bloodstream and tissue.
+
+    </string>
+
+    <string name="description_other">
+
+        OTHER with number 7. They are made of any combination of 1-6 or another, less commonly used plastic.
+        Biodegradable plastics, like cups made of corn, are NOT recyclable.
+        Though they have the recycling with 7, this only means "other plastics", including non-petroleum based.
+        Number 7 plastics are used to make baby bottles, sippy cups, water cooler bottles and car parts.
+        When possible it is best to avoid this kind of plastics, especially for children\'s food.
 
     </string>
 

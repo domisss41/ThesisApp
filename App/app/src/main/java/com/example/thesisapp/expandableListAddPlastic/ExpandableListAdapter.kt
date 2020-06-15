@@ -1,7 +1,6 @@
 package com.example.thesisapp.expandableListAddPlastic
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,12 +8,11 @@ import android.widget.BaseExpandableListAdapter
 import android.widget.Button
 import android.widget.TextView
 import com.example.thesisapp.R
-import com.example.thesisapp.plasticTypeModel
 
 class ExpandableListAdapter(
     var context: Context,
     var header: MutableList<String>,
-    var body : MutableList<MutableList<String>>) : BaseExpandableListAdapter() {
+    var body : MutableList<MutableList<plasticTypeModel>>) : BaseExpandableListAdapter() {
 
     lateinit var buttonIncrease: Button
     lateinit var buttonDecrease: Button
@@ -50,7 +48,7 @@ class ExpandableListAdapter(
     }
 
     override fun getChild(groupPosition: Int, childPosition: Int): String {
-        return body[groupPosition][childPosition]
+        return body[groupPosition][childPosition].plasticKind
     }
 
     override fun getGroupId(groupPosition: Int): Long {
@@ -67,27 +65,24 @@ class ExpandableListAdapter(
         val title = convertView?.findViewById<TextView>(R.id.plasticTitleChild)
         title?.text = getChild(groupPosition, childPosition)
 
-        var itemsAmount = 0
+
 
         if (convertView != null) {
-            buttonIncrease = convertView.findViewById(R.id.increase)
+              buttonIncrease = convertView.findViewById(R.id.increase)
             buttonDecrease = convertView.findViewById(R.id.decrease)
         }
 
         buttonIncrease.setOnClickListener(){
             val textViewResult = convertView?.findViewById<TextView>(R.id.result)
-            textViewResult?.text = (textViewResult?.text.toString().toInt() + 1).toString()
-            body
+            textViewResult?.text = (++body[groupPosition][childPosition].countPlastic).toString()
         }
 
         buttonDecrease.setOnClickListener(){
             val textViewResult = convertView?.findViewById<TextView>(R.id.result)
-            if(textViewResult?.text.toString().toInt() > 0) {
-                textViewResult?.text = (textViewResult?.text.toString().toInt() - 1).toString()
+            if(body[groupPosition][childPosition].countPlastic > 0) {
+                textViewResult?.text = (--body[groupPosition][childPosition].countPlastic).toString()
             }
         }
-
-
 
         return convertView
     }

@@ -49,9 +49,9 @@ class SignUp : AppCompatActivity() {
             return
         }
 
-        if (!Patterns.EMAIL_ADDRESS.matcher(email.text.toString()).matches()) {
-            email.error = "Please valid enter email"
-            email.requestFocus()
+        if (birth.text.toString().isEmpty()) {
+            birth.error = "Please enter year of birth"
+            birth.requestFocus()
             return
         }
 
@@ -61,21 +61,21 @@ class SignUp : AppCompatActivity() {
             return
         }
 
+        if (!Patterns.EMAIL_ADDRESS.matcher(email.text.toString()).matches()) {
+            email.error = "Please valid enter email"
+            email.requestFocus()
+            return
+        }
+
         if (password.text.toString() != repeatPassword.text.toString()) {
             repeatPassword.error = "Passwords do not match"
             repeatPassword.requestFocus()
             return
         }
 
-        if (password.length() < 4) {
+        if (password.length() < 6) {
             password.error = "Password is too short, must contains at least 6 characters"
             password.requestFocus()
-            return
-        }
-
-        if (birth.text.toString().isEmpty()) {
-            birth.error = "Please enter year of birth"
-            birth.requestFocus()
             return
         }
 
@@ -101,7 +101,7 @@ class SignUp : AppCompatActivity() {
                     Toast.makeText(baseContext, "Sign Up failed. Try again", Toast.LENGTH_SHORT).show()
                 }
 
-            }
+        }
     }
 
     private fun saveUser(){
@@ -114,7 +114,7 @@ class SignUp : AppCompatActivity() {
         val ref = FirebaseDatabase.getInstance().getReference("Users")
         //val userId = ref.push().key
         val userId = auth.uid
-        val userKey = auth.uid
+        val userKey = auth.uid // ID the same as user UID
 
         val user = User(userKey.toString(), login.toString(), email.toString(), password.toString(), birth.toString())
 
