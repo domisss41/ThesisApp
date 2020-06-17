@@ -68,7 +68,7 @@ class ExpandableListAdapter(
 
 
         if (convertView != null) {
-              buttonIncrease = convertView.findViewById(R.id.increase)
+            buttonIncrease = convertView.findViewById(R.id.increase)
             buttonDecrease = convertView.findViewById(R.id.decrease)
         }
 

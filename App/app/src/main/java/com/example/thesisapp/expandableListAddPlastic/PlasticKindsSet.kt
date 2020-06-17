@@ -10,25 +10,25 @@ class PlasticKindsSet() {
         foodPackage.add(
             plasticTypeModel(
                 "Plastic bottle",
-                100
+                30
             )
         )
         foodPackage.add(
             plasticTypeModel(
                 "Plastic bag",
-                15
+                1
             )
         )
         foodPackage.add(
             plasticTypeModel(
                 "Yogurt Cup",
-                70
+                20
             )
         )
         foodPackage.add(
             plasticTypeModel(
                 "Chips bag",
-                30
+                5
             )
         )
 
@@ -42,25 +42,25 @@ class PlasticKindsSet() {
         cosmetics.add(
             plasticTypeModel(
                 "Shower gel",
-                70
+                40
             )
         )
         cosmetics.add(
             plasticTypeModel(
                 "Cream",
-                20
+                40
             )
         )
         cosmetics.add(
             plasticTypeModel(
                 "Cotton bud",
-                70
+                5
             )
         )
         cosmetics.add(
             plasticTypeModel(
                 "Blade razor",
-                70
+                50
             )
         )
 
@@ -68,25 +68,25 @@ class PlasticKindsSet() {
         disposablePlastic.add(
             plasticTypeModel(
                 "Straw",
-                40
+                15
             )
         )
         disposablePlastic.add(
             plasticTypeModel(
                 "Plastic cup",
-                70
+                10
             )
         )
         disposablePlastic.add(
             plasticTypeModel(
                 "Plastic plate",
-                20
+                10
             )
         )
         disposablePlastic.add(
             plasticTypeModel(
                 "Plastic cutlery",
-                20
+                10
             )
         )
 
@@ -94,31 +94,31 @@ class PlasticKindsSet() {
         electronicWastePlastic.add(
             plasticTypeModel(
                 "Headphones",
-                40
+                80
             )
         )
         electronicWastePlastic.add(
             plasticTypeModel(
                 "Phone",
-                70
+                200
             )
         )
         electronicWastePlastic.add(
             plasticTypeModel(
                 "Charger",
-                20
+                100
             )
         )
         electronicWastePlastic.add(
             plasticTypeModel(
                 "Cable",
-                20
+                50
             )
         )
         electronicWastePlastic.add(
             plasticTypeModel(
                 "Laptop",
-                20
+                3000
             )
         )
 
@@ -131,14 +131,3 @@ class PlasticKindsSet() {
     }
 
 }
-//
-//    val foodPackage: ArrayList<plasticTypeModel> = ArrayList()
-//
-//        foodPackage.add(plasticTypeModel("Plastic bottle", 100))
-//        foodPackage.add(plasticTypeModel("Plastic bag", 15))
-//        foodPackage.add(plasticTypeModel("Yogurt Cup", 70))
-//        foodPackage.add(plasticTypeModel("Chips bag", 30))
-//
-//        plasticKinds.add(foodPackage)
-//    }
-//}
