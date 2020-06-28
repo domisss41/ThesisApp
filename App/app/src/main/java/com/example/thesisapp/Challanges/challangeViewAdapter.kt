@@ -15,9 +15,10 @@ class challangeViewAdapter(val ChallengeList: ArrayList<challangeDataModel>, val
 
         fun bindItems(challangeDataModel: challangeDataModel){
 
-            itemView.titleChallenge.text = challangeDataModel.titleChallage
+            itemView.titleChallenge.text = challangeDataModel.titleChallege
             itemView.descriptionChallenge.text = challangeDataModel.descChallenge
             itemView.imageChallenge.setImageResource(challangeDataModel.picChallenge)
+            challangeDataModel.tickPhoto?.let { itemView.tick.setImageResource(it) }
         }
     }
 

@@ -46,7 +46,7 @@ class Activity2 : AppCompatActivity() {
         val statysticsButton : Button = findViewById(R.id.buttonStatistics)
 
         statysticsButton.setOnClickListener {
-            val intent = Intent(this, Statystics :: class.java)
+            val intent = Intent(this, Statistics :: class.java)
             startActivity(intent)
         }
 

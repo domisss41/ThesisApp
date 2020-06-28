@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Statistics">
+    tools:context=".statisticsYear">
+
 
     <RelativeLayout
         android:id="@+id/statistics"
@@ -67,7 +68,7 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <Button
@@ -82,7 +83,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="WEEK"
-                    android:background="@drawable/button_background"
                     android:textSize="14sp" />
 
                 <Button
@@ -97,6 +97,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="YEAR"
+                    android:background="@drawable/button_background"
                     android:textSize="14sp" />
 
 
@@ -110,12 +111,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
-            android:text="Check your daily result"
+            android:text="Check your result"
             android:textColor="#000000"
             android:textSize="18sp" />
 
-        <com.github.mikephil.charting.charts.LineChart
-            android:id="@+id/plasticChartFirebase"
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/plasticBarChartFirebase"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
@@ -222,6 +223,7 @@
         </RelativeLayout>
 
     </LinearLayout>
+
 
 
 </RelativeLayout>

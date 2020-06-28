@@ -9,12 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".challengetypes"></activity>
+        <activity android:name=".statisticsYear"></activity>
+        <activity android:name=".challengetypes" />
         <activity android:name=".SubmitPlastic" />
         <activity android:name=".expandableListAddPlastic.PlasticExpandableListView" />
         <activity android:name=".Challanges.Challenges" />
         <activity android:name=".Recycling.Recycling" />
-        <activity android:name=".Statystics" />
+        <activity android:name=".Statistics" />
         <activity android:name=".AddPlastic" />
         <activity android:name=".MyAccount" />
         <activity android:name=".PlasticInfo.PlasticTypes.OTHER" />

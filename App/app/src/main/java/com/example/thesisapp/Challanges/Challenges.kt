@@ -15,22 +15,22 @@ class Challenges : AppCompatActivity() {
         val challenge = ArrayList<challangeDataModel> ()
 
         challenge.add(
-                challangeDataModel("Recommendation", "Tell about this app to family and friends", R.drawable.family)
+                challangeDataModel("Recommendation", "Tell about this app to family and friends", R.drawable.family, R.drawable.tick)
         )
         challenge.add(
-                challangeDataModel("Activity", "Keep using this app for 30 days", R.drawable.phone)
+                challangeDataModel("Activity", "Keep using this app for 30 days", R.drawable.phone, R.drawable.tick)
         )
         challenge.add(
-                challangeDataModel("Plastic bag reduction", "Take your own bag for shopping", R.drawable.grocery)
+                challangeDataModel("Plastic bag reduction", "Take your own bag for shopping", R.drawable.grocery,null)
         )
         challenge.add(
-                challangeDataModel("PET bottle reduction", "Take your drinks from home with you", R.drawable.plastic)
+                challangeDataModel("PET bottle reduction", "Take your drinks from home with you", R.drawable.plastic,null)
         )
         challenge.add(
-                challangeDataModel("Plastic reduction", "Do not use plastic straws", R.drawable.straw)
+                challangeDataModel("Plastic reduction", "Do not use plastic straws", R.drawable.straw, null)
         )
         challenge.add(
-                challangeDataModel("Cosmetics change", "Use bar soap and shampoo bar", R.drawable.soap)
+                challangeDataModel("Cosmetics change", "Use bar soap and shampoo bar", R.drawable.soap,null)
         )
 
         val challengeViewAdapter = challangeViewAdapter(challenge, this)

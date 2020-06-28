@@ -1,9 +1,12 @@
 package com.example.thesisapp
 
+import android.content.Intent
+import android.graphics.Color.GRAY
 import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.thesisapp.expandableListAddPlastic.plasticValueModel
@@ -20,13 +23,20 @@ import java.time.LocalDateTime
 import java.time.ZoneOffset
 
 
-class Statystics : AppCompatActivity() {
+class Statistics : AppCompatActivity() {
 
     lateinit var mDatabase: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_statystics)
+
+        val yearChart : Button = findViewById(R.id.yearStatistics)
+
+        yearChart.setOnClickListener {
+            val intent = Intent(this, statisticsYear::class.java)
+            startActivity(intent)
+        }
 
         // chart
 
@@ -56,14 +66,14 @@ class Statystics : AppCompatActivity() {
                     plot2.lineWidth = 3f
                     plot2.circleRadius = 5F
                     plot2.valueTextSize = 8F
+                    plot2.color = GRAY
+                    plot2.setCircleColor(GRAY)
 
-                    plasticChartFirebase.data = LineData(plot2)
 
                     plasticChartFirebase.data = LineData(plot2)
                     plasticChartFirebase.axisRight.isEnabled = false
 
                     plasticChartFirebase.setTouchEnabled(true)
-
                     plasticChartFirebase.description.text = "Days"
 
                     plasticChartFirebase.description.textSize = 10F
@@ -74,9 +84,9 @@ class Statystics : AppCompatActivity() {
 
                     xAxis.valueFormatter = xAxisFormatter
                     xAxis.setLabelCount(bins.count(), true)
+                    //xAxis.labelCount = 7
+
                     xAxis.setPosition(XAxis.XAxisPosition.BOTTOM)
-
-
                     yAxis.axisMinimum = 0F
 
                     plasticChartFirebase.invalidate()

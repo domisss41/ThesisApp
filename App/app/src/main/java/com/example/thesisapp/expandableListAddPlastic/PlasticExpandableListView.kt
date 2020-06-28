@@ -24,12 +24,12 @@ class PlasticExpandableListView : AppCompatActivity() {
     lateinit var database: FirebaseDatabase
     lateinit var mDatabase: DatabaseReference
 
-    @RequiresApi(Build.VERSION_CODES.O)
+    /*@RequiresApi(Build.VERSION_CODES.O)
     var date = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         DateTimeFormatter.ofPattern("hh:mm:ss")
     } else {
         TODO("VERSION.SDK_INT < O")
-    }
+    }*/
 
     val header : MutableList<String> = ArrayList()
     val body: MutableList<MutableList<plasticTypeModel>> = ArrayList()
@@ -96,8 +96,8 @@ class PlasticExpandableListView : AppCompatActivity() {
         submitSubmit.setOnClickListener {
             Toast.makeText(baseContext, "Plastic succesfully added", Toast.LENGTH_SHORT).show()
 
-            val intent = Intent(this, SubmitPlastic :: class.java)
-            startActivity(intent)
+//            val intent = Intent(this, SubmitPlastic :: class.java)
+//            startActivity(intent)
 
             var count = 0f
 
