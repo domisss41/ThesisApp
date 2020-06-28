@@ -154,7 +154,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="All usage:"
+                    android:text="Total usage:"
                     android:textAllCaps="true"
                     android:textStyle="bold"
                     android:textColor="#000000"
@@ -167,9 +167,9 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="10dp"
                     android:inputType="numberDecimal"
-                    android:text="413 g"
+                    android:text="loading..."
                     android:textColor="#000000"
-                    android:textSize="15sp" />
+                    android:textSize="12sp" />
 
 
             </LinearLayout>
@@ -212,9 +212,9 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="10dp"
                     android:inputType="numberDecimal"
-                    android:text="125 g"
+                    android:text="loading..."
                     android:textColor="#000000"
-                    android:textSize="15sp" />
+                    android:textSize="12sp" />
 
 
             </LinearLayout>

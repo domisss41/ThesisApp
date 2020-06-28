@@ -119,9 +119,6 @@ class PlasticExpandableListView : AppCompatActivity() {
 
         var current = LocalDateTime.now()
         var x = LocalDateTime.of(current.year, current.month, current.dayOfMonth, 0, 0).toString()
-        //val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT)
-        //val x = current.format(formatter)
-
         var y = count
 
         val pointValue = plasticValueModel(x, y)

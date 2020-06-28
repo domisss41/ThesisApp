@@ -69,7 +69,6 @@ class Statistics : AppCompatActivity() {
                     plot2.color = GRAY
                     plot2.setCircleColor(GRAY)
 
-
                     plasticChartFirebase.data = LineData(plot2)
                     plasticChartFirebase.axisRight.isEnabled = false
 
@@ -90,9 +89,26 @@ class Statistics : AppCompatActivity() {
                     yAxis.axisMinimum = 0F
 
                     plasticChartFirebase.invalidate()
+
+                    // count all plastic
+
+                    var totalPlastic = 0f
+                    var todayResultValue = 0f
+                    for (bin in bins){
+                        totalPlastic += bin.value
+                        todayResultValue = bin.value
+                    }
+
+                    allResult.text = totalPlastic.toInt().toString()
+                    todayResult.text = todayResultValue.toInt().toString()
                 }
+
+
+
             override fun onCancelled(databaseError: DatabaseError) {
             }
+
+
         }
 
         mDatabase.addListenerForSingleValueEvent(addValueEventListener)
