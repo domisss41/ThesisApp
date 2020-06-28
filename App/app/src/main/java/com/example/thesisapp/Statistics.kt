@@ -58,10 +58,22 @@ class Statistics : AppCompatActivity() {
                         }
                     }
 
+                    // It should look like this...
                     var dataChartPlastic = ArrayList<Entry>()
                     for (bin in bins)
                         dataChartPlastic.add(Entry((bin.key).toFloat(), bin.value))
-                    val plot2 = LineDataSet(dataChartPlastic, "Plastic weight [ g ]")
+
+
+                    // .. but we needed to make a hot fix
+                    var dataChartPlasticWeek = ArrayList<Entry>()
+                    for(i in 7 downTo 1)
+                        dataChartPlasticWeek.add( Entry(dataChartPlastic[dataChartPlastic.count() - i].x, dataChartPlastic[dataChartPlastic.count() - i].y ) )
+
+
+//                    val plot2 = LineDataSet(dataChartPlastic, "Plastic weight [ g ]")
+                    val plot2 = LineDataSet(dataChartPlasticWeek, "Plastic weight [ g ]")
+
+
 
                     plot2.lineWidth = 3f
                     plot2.circleRadius = 5F
@@ -82,8 +94,9 @@ class Statistics : AppCompatActivity() {
                     val yAxis: YAxis = plasticChartFirebase.axisLeft
 
                     xAxis.valueFormatter = xAxisFormatter
-                    xAxis.setLabelCount(bins.count(), true)
-                    //xAxis.labelCount = 7
+//                    xAxis.setLabelCount(bins.count(), true)
+                    xAxis.setLabelCount(7, true)
+
 
                     xAxis.setPosition(XAxis.XAxisPosition.BOTTOM)
                     yAxis.axisMinimum = 0F
