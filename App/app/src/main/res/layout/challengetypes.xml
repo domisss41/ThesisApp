@@ -66,6 +66,7 @@
                 android:id="@+id/tick"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
                 android:layout_gravity="center" />
 
             </LinearLayout>

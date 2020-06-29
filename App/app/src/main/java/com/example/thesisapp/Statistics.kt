@@ -80,6 +80,7 @@ class Statistics : AppCompatActivity() {
                     plot2.valueTextSize = 8F
                     plot2.color = GRAY
                     plot2.setCircleColor(GRAY)
+                    plot2.setDrawValues(false)
 
                     plasticChartFirebase.data = LineData(plot2)
                     plasticChartFirebase.axisRight.isEnabled = false

@@ -17,6 +17,9 @@ import com.github.mikephil.charting.formatter.IAxisValueFormatter
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_statistics_year.*
+import kotlinx.android.synthetic.main.activity_statistics_year.allResult
+import kotlinx.android.synthetic.main.activity_statistics_year.todayResult
+import kotlinx.android.synthetic.main.activity_statystics.*
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 
@@ -52,7 +55,7 @@ class statisticsYear : AppCompatActivity() {
                         var date = LocalDateTime.parse(pointValue.xvalue).toEpochSecond(ZoneOffset.ofHours(2))
                         if (i == 0)
                             referenceTimestamp = date
-                        bins[date] = bins.getOrDefault(date - referenceTimestamp, 0f) + pointValue.yvalue
+                        bins[date - referenceTimestamp] = bins.getOrDefault(date - referenceTimestamp, 0f) + pointValue.yvalue
                     }
                 }
                 val January = 1577836800
@@ -71,46 +74,46 @@ class statisticsYear : AppCompatActivity() {
                 val February2021 = 1612051200
 
                 var dataBarChartPlastic = ArrayList<BarEntry>()
-                for (i in 1 until 13 ) {
+                for (i in 0 until 12 ) {
                     dataBarChartPlastic.add(BarEntry(i.toFloat(), 0.toFloat()))
                 }
 
                 for (bin in bins){
                     if( January < bin.key && bin.key < March)
-                        dataBarChartPlastic[0].y += bin.value.toFloat()
-
-                    else if( February < bin.key && bin.key < April)
                         dataBarChartPlastic[1].y += bin.value.toFloat()
 
-                    else if( March < bin.key && bin.key < May)
+                    else if( February < bin.key && bin.key < April)
                         dataBarChartPlastic[2].y += bin.value.toFloat()
 
-                    else if( April < bin.key && bin.key < June)
+                    else if( March < bin.key && bin.key < May)
                         dataBarChartPlastic[3].y += bin.value.toFloat()
 
-                    else if( May < bin.key && bin.key < July)
+                    else if( April < bin.key && bin.key < June)
                         dataBarChartPlastic[4].y += bin.value.toFloat()
 
-                    else if( June < bin.key && bin.key < August)
+                    else if( May < bin.key && bin.key < July)
                         dataBarChartPlastic[5].y += bin.value.toFloat()
 
-                    else if( July < bin.key && bin.key < September)
+                    else if( June < bin.key && bin.key < August)
                         dataBarChartPlastic[6].y += bin.value.toFloat()
 
-                    else if( August < bin.key && bin.key < October)
+                    else if( July < bin.key && bin.key < September)
                         dataBarChartPlastic[7].y += bin.value.toFloat()
 
-                    else if( September < bin.key && bin.key < November)
+                    else if( August < bin.key && bin.key < October)
                         dataBarChartPlastic[8].y += bin.value.toFloat()
 
-                    else if( October < bin.key && bin.key < December)
+                    else if( September < bin.key && bin.key < November)
                         dataBarChartPlastic[9].y += bin.value.toFloat()
 
-                    else if( November < bin.key && bin.key < January2021)
+                    else if( October < bin.key && bin.key < December)
                         dataBarChartPlastic[10].y += bin.value.toFloat()
 
-                    else if( December < bin.key && bin.key < February2021)
+                    else if( November < bin.key && bin.key < January2021)
                         dataBarChartPlastic[11].y += bin.value.toFloat()
+
+                    else if( December < bin.key && bin.key < February2021)
+                        dataBarChartPlastic[12].y += bin.value.toFloat()
 
                 }
 
@@ -118,7 +121,7 @@ class statisticsYear : AppCompatActivity() {
 
                 plot2.valueTextSize = 8F
                 plot2.barBorderWidth = 1F
-                plot2.barBorderColor = GRAY
+                plot2.color = GRAY
                 plot2.setDrawValues(false)
 //                plasticBarChartFirebase.setFitBars(true)
 
@@ -145,45 +148,34 @@ class statisticsYear : AppCompatActivity() {
                 xAxisLabel.add("Oct")
                 xAxisLabel.add("Nov")
                 xAxisLabel.add("Dec")
-//                xAxisLabel.add("1")
-//                xAxisLabel.add("2")
-//                xAxisLabel.add("3")
-//                xAxisLabel.add("4")
-//                xAxisLabel.add("5")
-//                xAxisLabel.add("6")
-//                xAxisLabel.add("7")
-//                xAxisLabel.add("8")
-//                xAxisLabel.add("9")
-//                xAxisLabel.add("10")
-//                xAxisLabel.add("11")
-//                xAxisLabel.add("12")
-//                xAxisLabel.add(" ")
-//                xAxisLabel.add(" ")
-//                xAxisLabel.add(" ")
-//                xAxisLabel.add(" ")
-//                xAxisLabel.add(" ")
-//                xAxisLabel.add(" ")
-//                xAxisLabel.add(" ")
-//                xAxisLabel.add(" ")
-//                xAxisLabel.add(" ")
-//                xAxisLabel.add(" ")
-//                xAxisLabel.add(" ")
-//                xAxisLabel.add(" ")
+//
                 xAxis.valueFormatter = IndexAxisValueFormatter(xAxisLabel)
 
-//                xAxis.valueFormatter = xAxisFormatter
-//                xAxis.setLabelCount(12)
                 xAxis.labelRotationAngle = -0f
                 xAxis.labelCount = 12
-//                xAxis.setCenterAxisLabels(true);
                 xAxis.setPosition(XAxis.XAxisPosition.BOTTOM)
                 yAxis.axisMinimum = 1F
+                yAxis.axisMinimum = 0F
                 plasticBarChartFirebase.invalidate()
+
+                // total and today's results
+
+                var totalPlastic = 0f
+                var todayResultValue = 0f
+                for (bin in bins){
+                    totalPlastic += bin.value
+                    todayResultValue = bin.value
+                }
+
+                allResult.text = totalPlastic.toInt().toString()
+                todayResult.text = todayResultValue.toInt().toString()
+
             }
             override fun onCancelled(databaseError: DatabaseError) {
             }
-        }
 
+
+        }
         mDatabase.addListenerForSingleValueEvent(addValueEventListener)
 
     }
