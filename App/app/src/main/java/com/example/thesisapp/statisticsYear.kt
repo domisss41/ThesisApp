@@ -56,7 +56,7 @@ class statisticsYear : AppCompatActivity() {
                         if (i == 0)
                             referenceTimestamp = date
                         bins[date - referenceTimestamp] = bins.getOrDefault(date - referenceTimestamp, 0f) + pointValue.yvalue
-                    }
+                    }//problem with referenceTimestamp
                 }
                 val January = 1577836800
                 val February = 1580515200
@@ -79,40 +79,40 @@ class statisticsYear : AppCompatActivity() {
                 }
 
                 for (bin in bins){
-                    if( January < bin.key && bin.key < March)
+                    if( January < bin.key + referenceTimestamp && bin.key + referenceTimestamp < March)
                         dataBarChartPlastic[1].y += bin.value.toFloat()
 
-                    else if( February < bin.key && bin.key < April)
+                    else if( February < bin.key + referenceTimestamp && bin.key + referenceTimestamp < April)
                         dataBarChartPlastic[2].y += bin.value.toFloat()
 
-                    else if( March < bin.key && bin.key < May)
+                    else if( March < bin.key + referenceTimestamp && bin.key + referenceTimestamp < May)
                         dataBarChartPlastic[3].y += bin.value.toFloat()
 
-                    else if( April < bin.key && bin.key < June)
+                    else if( April < bin.key + referenceTimestamp && bin.key + referenceTimestamp < June)
                         dataBarChartPlastic[4].y += bin.value.toFloat()
 
-                    else if( May < bin.key && bin.key < July)
+                    else if( May < bin.key + referenceTimestamp && bin.key + referenceTimestamp < July)
                         dataBarChartPlastic[5].y += bin.value.toFloat()
 
-                    else if( June < bin.key && bin.key < August)
+                    else if( June < bin.key + referenceTimestamp && bin.key + referenceTimestamp < August)
                         dataBarChartPlastic[6].y += bin.value.toFloat()
 
-                    else if( July < bin.key && bin.key < September)
+                    else if( July < bin.key + referenceTimestamp && bin.key + referenceTimestamp < September)
                         dataBarChartPlastic[7].y += bin.value.toFloat()
 
-                    else if( August < bin.key && bin.key < October)
+                    else if( August < bin.key + referenceTimestamp && bin.key + referenceTimestamp < October)
                         dataBarChartPlastic[8].y += bin.value.toFloat()
 
-                    else if( September < bin.key && bin.key < November)
+                    else if( September < bin.key + referenceTimestamp && bin.key + referenceTimestamp < November)
                         dataBarChartPlastic[9].y += bin.value.toFloat()
 
-                    else if( October < bin.key && bin.key < December)
+                    else if( October < bin.key + referenceTimestamp && bin.key + referenceTimestamp < December)
                         dataBarChartPlastic[10].y += bin.value.toFloat()
 
-                    else if( November < bin.key && bin.key < January2021)
+                    else if( November < bin.key + referenceTimestamp && bin.key + referenceTimestamp < January2021)
                         dataBarChartPlastic[11].y += bin.value.toFloat()
 
-                    else if( December < bin.key && bin.key < February2021)
+                    else if( December < bin.key + referenceTimestamp && bin.key + referenceTimestamp < February2021)
                         dataBarChartPlastic[12].y += bin.value.toFloat()
 
                 }

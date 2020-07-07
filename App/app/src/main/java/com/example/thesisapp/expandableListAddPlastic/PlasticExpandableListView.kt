@@ -94,7 +94,7 @@ class PlasticExpandableListView : AppCompatActivity() {
         val submitSubmit : Button = findViewById(R.id.addPlasticUsedToday)
 
         submitSubmit.setOnClickListener {
-            Toast.makeText(baseContext, "Plastic succesfully added", Toast.LENGTH_SHORT).show()
+            Toast.makeText(baseContext, "Plastic was successfully added", Toast.LENGTH_SHORT).show()
 
 //            val intent = Intent(this, SubmitPlastic :: class.java)
 //            startActivity(intent)
